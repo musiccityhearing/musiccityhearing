@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lost River Hearing - Farley Enterprises, LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background-color: #fdfcf9;
+      color: #333;
+    }
+    header {
+      background-color: #1a1a2e;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8em;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+    .hero {
+      background: linear-gradient(to bottom, #0f0f3a, #fdfcf9);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2em;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .faq-item {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+    .faq-question {
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .faq-answer {
+      display: none;
+      padding-top: 5px;
+    }
+    .button {
+      background-color: #1a1a2e;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px auto;
+      text-align: center;
+    }
+    footer {
+      background-color: #1a1a2e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    /* Hamburger menu for mobile */
+    .hamburger {
+      display: none;
+      font-size: 2em;
+      cursor: pointer;
+      user-select: none;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: #1a1a2e;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+      }
+      nav a {
+        margin: 10px 0;
+        display: block;
+      }
+      .hamburger {
+        display: block;
+      }
+      nav.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Music City Hearing</h1>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <nav id="navMenu">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#faq">FAQ</a>
+    <a href="#foundation">Foundation</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrrnlVHZtfr-rr-8276QS_diK3g-L4_vC1wEHmKQ4dWKRmMFN1R1Ga6C-WiZr49xfzWG_8y5jV2PmST-V9jwG-PlEPYtPJyiE9luh2ZGouVTK7e75jTj2Ozzef99ZXtWwIlMTORzME-QTkcq3NmYKpwiJd0H57DygFtjMazH857pp31T_hoSxxWyBw_Rs/w256-h263/Music%20City%20Hearing.png" alt="Music City Hearing Logo" style="max-width: 200px; width: 100%; height: auto;">
+</div>
+
+<div class="hero">
+  <h2>Concierge Hearing Care at Your Doorstep</h2>
+  <p>In-home or in-office appointments with premium Phonak hearing aids and lifetime remote support. Helping children with hearing loss with every purchase.</p>
+  <a href="#contact" class="button">Request Consultation</a>
+  <a href="#services" class="button">Learn About Services</a>
+</div>
+
+<div class="section" id="about">
+  <h3>About Lost River Hearing</h3>
+  <p>Music City Hearing is a mobile concierge hearing care practice serving the local community. Our founder, Michael Adam Farley, combines years of expertise with personalized care. Our services focus on premium hearing aid fitting, in-home convenience, and lifetime support for our patients. Each purchase contributes to the Farley Communication Accessibility Foundation, helping children with hearing loss.</p>
+</div>
+
+<div class="section" id="services">
+  <h3>Our Services</h3>
+  <ul>
+    <li>$250 Consultation Fee (deducted from hearing aid purchase)</li>
+    <li>$50 Travel Fee (per visit)</li>
+    <li>Three free in-person follow-ups within first 30 days</li>
+    <li>$75 follow-ups after 30 days + $50 travel fee</li>
+    <li>Free remote follow-ups for the lifetime of your hearing aids</li>
+    <li>Premium Phonak hearing aids with optional OTC backup sets</li>
+  </ul>
+</div>
+
+<div class="section" id="faq">
+  <h3>Frequently Asked Questions</h3>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">Do you bill insurance?</div>
+    <div class="faq-answer">Currently, we operate as a direct-pay concierge service and do not bill insurance.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">Do you provide in-home visits?</div>
+    <div class="faq-answer">Yes! Our mobile practice allows us to come to your home or office.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">What brands do you offer?</div>
+    <div class="faq-answer">We provide premium Phonak hearing aids and an optional OTC backup set for qualifying patients.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">How does my purchase help children?</div>
+    <div class="faq-answer">10% of every hearing aid sale goes to the Farley Communication Accessibility Foundation to assist children with hearing loss. "When you hear, you help them to hear."</div>
+  </div>
+</div>
+
+<div class="section" id="foundation">
+  <h3>Farley Communication Accessibility Foundation</h3>
+  <p>Our foundation helps children with hearing loss access the technology and support they need. Every purchase you make helps us provide hearing aids, therapy, and education to kids who need it most.</p>
+</div>
+
+<div class="section" id="contact">
+  <h3>Request a Consultation</h3>
+  <p>Fill out the form below to schedule your in-home or in-office hearing care session.</p>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdv7LFHN1_eXTMuhnG6NRGtBfzSPoxMgcMkSJEGrHSFQTWzMw/viewform?embedded=true" width="640" height="959" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+
+<footer>
+  <p>&copy; Music City Hearing is a DBA of Farley Enterprises, LLC - All Rights Reserved 2025</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("show");
+}
+function toggleFaq(element) {
+  const answer = element.nextElementSibling;
+  if(answer.style.display === "block") {
+    answer.style.display = "none";
+  } else {
+    answer.style.display = "block";
+  }
+}
+</script>
+</body>
+</html>
